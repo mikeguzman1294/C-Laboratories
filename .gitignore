@@ -1,3 +1,6 @@
+# Repository Specific
+.out
+
 # Prerequisites
 *.d
 

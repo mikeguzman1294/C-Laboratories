@@ -1,0 +1,515 @@
+Program usage is as follows: ./main_2.2.out field.
+where "field" can take values from {1,2,3} and corresponds to the field by which the stocks will be ordered, i.e. by Name, Current_price, and Day change respectively.
+Retrieving stocks from online web-page...
+Web page has been retrieved and loaded into memory.
+Array of stocks has been created with cardinality 102.
+
+Stock id: #1
+Stock name: Spirax-Sarco Engineering plc
+Stock current_price: 7.000000
+Stock day_change: -260.000000
+
+Stock id: #2
+Stock name: London Stock Exchange Group plc
+Stock current_price: 6.000000
+Stock day_change: -208.000000
+
+Stock id: #3
+Stock name: Reckitt Benckiser Group Plc
+Stock current_price: 6.000000
+Stock day_change: -70.000000
+
+Stock id: #4
+Stock name: Halma plc
+Stock current_price: 1.000000
+Stock day_change: -48.000000
+
+Stock id: #5
+Stock name: Smiths Group Plc
+Stock current_price: 1.000000
+Stock day_change: -18.500000
+
+Stock id: #6
+Stock name: Pennon Group
+Stock current_price: 1.000000
+Stock day_change: -11.000000
+
+Stock id: #7
+Stock name: United Utilities Group Plc
+Stock current_price: 839.799988
+Stock day_change: -10.000000
+
+Stock id: #8
+Stock name: Sainsbury (J) plc
+Stock current_price: 209.399994
+Stock day_change: -4.100000
+
+Stock id: #9
+Stock name: BP Plc
+Stock current_price: 333.500000
+Stock day_change: -3.900000
+
+Stock id: #10
+Stock name: Morrison (Wm) Supermarkets
+Stock current_price: 182.350006
+Stock day_change: -3.350000
+
+Stock id: #11
+Stock name: Rentokil Initial Plc
+Stock current_price: 381.149994
+Stock day_change: -2.300000
+
+Stock id: #12
+Stock name: Tesco plc
+Stock current_price: 223.000000
+Stock day_change: -0.800000
+
+Stock id: #13
+Stock name: Centrica plc
+Stock current_price: 31.500000
+Stock day_change: -0.340000
+
+Stock id: #14
+Stock name: Royal Dutch Shell Plc A Shares
+Stock current_price: 1.000000
+Stock day_change: 0.000000
+
+Stock id: #15
+Stock name: Pearson plc
+Stock current_price: 477.799988
+Stock day_change: 0.000000
+
+Stock id: #16
+Stock name: NMC Health Plc
+Stock current_price: 1.000000
+Stock day_change: 0.000000
+
+Stock id: #17
+Stock name: Admiral Group
+Stock current_price: 2.000000
+Stock day_change: 0.000000
+
+Stock id: #18
+Stock name: Imperial Brands Group
+Stock current_price: 1.000000
+Stock day_change: 1.500000
+
+Stock id: #19
+Stock name: Lloyds Banking Group plc
+Stock current_price: 29.410000
+Stock day_change: 1.690000
+
+Stock id: #20
+Stock name: Royal Bank of Scotland Group plc
+Stock current_price: 104.949997
+Stock day_change: 3.200000
+
+Stock id: #21
+Stock name: Ocado Group plc
+Stock current_price: 1.000000
+Stock day_change: 4.500000
+
+Stock id: #22
+Stock name: ITV plc
+Stock current_price: 58.970001
+Stock day_change: 4.560000
+
+Stock id: #23
+Stock name: Sage Group plc
+Stock current_price: 563.200012
+Stock day_change: 5.000000
+
+Stock id: #24
+Stock name: Vodafone Group plc
+Stock current_price: 116.169998
+Stock day_change: 5.140000
+
+Stock id: #25
+Stock name: BT Group plc
+Stock current_price: 117.000000
+Stock day_change: 5.700000
+
+Stock id: #26
+Stock name: Barclays plc
+Stock current_price: 86.110001
+Stock day_change: 5.870000
+
+Stock id: #27
+Stock name: Evraz plc
+Stock current_price: 234.250000
+Stock day_change: 6.300000
+
+Stock id: #28
+Stock name: Antofagasta Holdings
+Stock current_price: 764.400024
+Stock day_change: 7.200000
+
+Stock id: #29
+Stock name: Royal Dutch Shell Plc B Shares
+Stock current_price: 1.000000
+Stock day_change: 7.400000
+
+Stock id: #30
+Stock name: M&amp;G plc
+Stock current_price: 117.000000
+Stock day_change: 7.750000
+
+Stock id: #31
+Stock name: Glencore plc
+Stock current_price: 128.460007
+Stock day_change: 8.460000
+
+Stock id: #32
+Stock name: Aviva plc
+Stock current_price: 244.699997
+Stock day_change: 11.000000
+
+Stock id: #33
+Stock name: Melrose Industries plc
+Stock current_price: 87.550003
+Stock day_change: 12.220000
+
+Stock id: #34
+Stock name: Standard Chartered plc
+Stock current_price: 419.549988
+Stock day_change: 13.000000
+
+Stock id: #35
+Stock name: Bunzl plc
+Stock current_price: 1.000000
+Stock day_change: 13.500000
+
+Stock id: #36
+Stock name: Phoenix Group Holdings Plc
+Stock current_price: 546.299988
+Stock day_change: 15.200000
+
+Stock id: #37
+Stock name: BAE Systems plc
+Stock current_price: 515.200012
+Stock day_change: 15.200000
+
+Stock id: #38
+Stock name: Taylor Wimpey plc
+Stock current_price: 116.800003
+Stock day_change: 15.250000
+
+Stock id: #39
+Stock name: Standard Life Aberdeen Plc
+Stock current_price: 208.399994
+Stock day_change: 15.500000
+
+Stock id: #40
+Stock name: Smith (DS)
+Stock current_price: 270.250000
+Stock day_change: 15.600000
+
+Stock id: #41
+Stock name: HSBC Holdings plc
+Stock current_price: 413.899994
+Stock day_change: 16.700001
+
+Stock id: #42
+Stock name: GlaxoSmithKline plc
+Stock current_price: 1.000000
+Stock day_change: 18.400000
+
+Stock id: #43
+Stock name: RSA Insurance Group
+Stock current_price: 389.500000
+Stock day_change: 18.500000
+
+Stock id: #44
+Stock name: National Grid
+Stock current_price: 861.799988
+Stock day_change: 19.799999
+
+Stock id: #45
+Stock name: British American Tobacco plc
+Stock current_price: 2.000000
+Stock day_change: 22.500000
+
+Stock id: #46
+Stock name: Informa plc
+Stock current_price: 386.350006
+Stock day_change: 22.799999
+
+Stock id: #47
+Stock name: British Land Co plc
+Stock current_price: 338.950012
+Stock day_change: 24.500000
+
+Stock id: #48
+Stock name: International Consolidated Airlines Group SA
+Stock current_price: 222.800003
+Stock day_change: 24.900000
+
+Stock id: #49
+Stock name: WPP plc
+Stock current_price: 509.399994
+Stock day_change: 25.700001
+
+Stock id: #50
+Stock name: Rightmove plc
+Stock current_price: 465.799988
+Stock day_change: 25.700001
+
+Stock id: #51
+Stock name: Legal &amp; General Group plc
+Stock current_price: 185.949997
+Stock day_change: 26.250000
+
+Stock id: #52
+Stock name: Segro Plc
+Stock current_price: 771.799988
+Stock day_change: 26.400000
+
+Stock id: #53
+Stock name: Auto Trader Group plc
+Stock current_price: 398.450012
+Stock day_change: 26.799999
+
+Stock id: #54
+Stock name: Fresnillo
+Stock current_price: 662.599976
+Stock day_change: 27.000000
+
+Stock id: #55
+Stock name: Rio Tinto plc
+Stock current_price: 3.000000
+Stock day_change: 30.000000
+
+Stock id: #56
+Stock name: Meggitt
+Stock current_price: 247.350006
+Stock day_change: 30.299999
+
+Stock id: #57
+Stock name: Scottish Mortgage Investment Trust
+Stock current_price: 569.000000
+Stock day_change: 30.500000
+
+Stock id: #58
+Stock name: Polymetal International plc
+Stock current_price: 1.000000
+Stock day_change: 30.500000
+
+Stock id: #59
+Stock name: Land Securities Group plc
+Stock current_price: 545.900024
+Stock day_change: 31.000000
+
+Stock id: #60
+Stock name: St James's Place Plc
+Stock current_price: 741.700012
+Stock day_change: 31.600000
+
+Stock id: #61
+Stock name: Rolls Royce Holdings Plc
+Stock current_price: 287.850006
+Stock day_change: 36.299999
+
+Stock id: #62
+Stock name: Hargreaves Lansdown plc
+Stock current_price: 1.000000
+Stock day_change: 38.000000
+
+Stock id: #63
+Stock name: Severn Trent Plc
+Stock current_price: 2.000000
+Stock day_change: 41.000000
+
+Stock id: #64
+Stock name: 3i Group Plc
+Stock current_price: 730.400024
+Stock day_change: 41.799999
+
+Stock id: #65
+Stock name: RELX plc
+Stock current_price: 1.000000
+Stock day_change: 43.000000
+
+Stock id: #66
+Stock name: Experian Plc
+Stock current_price: 2.000000
+Stock day_change: 43.000000
+
+Stock id: #67
+Stock name: Mondi Plc
+Stock current_price: 1.000000
+Stock day_change: 43.500000
+
+Stock id: #68
+Stock name: SSE plc
+Stock current_price: 1.000000
+Stock day_change: 44.000000
+
+Stock id: #69
+Stock name: AstraZeneca plc
+Stock current_price: 7.000000
+Stock day_change: 45.000000
+
+Stock id: #70
+Stock name: BHP Group Plc
+Stock current_price: 1.000000
+Stock day_change: 47.200001
+
+Stock id: #71
+Stock name: Compass Group plc
+Stock current_price: 1.000000
+Stock day_change: 48.500000
+
+Stock id: #72
+Stock name: Intertek Group plc
+Stock current_price: 4.000000
+Stock day_change: 61.000000
+
+Stock id: #73
+Stock name: Barratt Developments plc
+Stock current_price: 448.549988
+Stock day_change: 64.199997
+
+Stock id: #74
+Stock name: Smith &amp; Nephew plc
+Stock current_price: 1.000000
+Stock day_change: 65.500000
+
+Stock id: #75
+Stock name: Hikma Pharmaceuticals
+Stock current_price: 2.000000
+Stock day_change: 67.000000
+
+Stock id: #76
+Stock name: easyJet plc
+Stock current_price: 543.799988
+Stock day_change: 68.599998
+
+Stock id: #77
+Stock name: Schroders plc
+Stock current_price: 2.000000
+Stock day_change: 70.000000
+
+Stock id: #78
+Stock name: JD Sports Fashion plc
+Stock current_price: 478.600006
+Stock day_change: 70.900002
+
+Stock id: #79
+Stock name: Burberry Group plc
+Stock current_price: 1.000000
+Stock day_change: 77.000000
+
+Stock id: #80
+Stock name: Diageo plc
+Stock current_price: 2.000000
+Stock day_change: 82.000000
+
+Stock id: #81
+Stock name: Anglo American
+Stock current_price: 1.000000
+Stock day_change: 83.599998
+
+Stock id: #82
+Stock name: Unilever plc
+Stock current_price: 4.000000
+Stock day_change: 94.000000
+
+Stock id: #83
+Stock name: Johnson Matthey Plc
+Stock current_price: 1.000000
+Stock day_change: 97.500000
+
+Stock id: #84
+Stock name: Croda International plc
+Stock current_price: 4.000000
+Stock day_change: 102.000000
+
+Stock id: #85
+Stock name: CRH plc
+Stock current_price: 2.000000
+Stock day_change: 104.000000
+
+Stock id: #86
+Stock name: Prudential plc
+Stock current_price: 1.000000
+Stock day_change: 104.300003
+
+Stock id: #87
+Stock name: Carnival plc
+Stock current_price: 719.799988
+Stock day_change: 105.400002
+
+Stock id: #88
+Stock name: Intermediate Capital Group plc
+Stock current_price: 933.500000
+Stock day_change: 110.500000
+
+Stock id: #89
+Stock name: DCC plc
+Stock current_price: 5.000000
+Stock day_change: 119.000000
+
+Stock id: #90
+Stock name: Associated British Foods plc
+Stock current_price: 1.000000
+Stock day_change: 122.000000
+
+Stock id: #91
+Stock name: Whitbread plc
+Stock current_price: 2.000000
+Stock day_change: 128.000000
+
+Stock id: #92
+Stock name: Ashtead Group plc
+Stock current_price: 1.000000
+Stock day_change: 131.500000
+
+Stock id: #93
+Stock name: Smurfit Kappa Group Plc
+Stock current_price: 2.000000
+Stock day_change: 140.000000
+
+Stock id: #94
+Stock name: Just Eat Takeaway.com NV
+Stock current_price: 6.000000
+Stock day_change: 146.000000
+
+Stock id: #95
+Stock name: AVEVA Group plc
+Stock current_price: 3.000000
+Stock day_change: 147.000000
+
+Stock id: #96
+Stock name: Coca-Cola HBC AG
+Stock current_price: 1.000000
+Stock day_change: 163.500000
+
+Stock id: #97
+Stock name: Persimmon plc
+Stock current_price: 1.000000
+Stock day_change: 223.500000
+
+Stock id: #98
+Stock name: Flutter Entertainment
+Stock current_price: 7.000000
+Stock day_change: 274.000000
+
+Stock id: #99
+Stock name: Ferguson plc
+Stock current_price: 4.000000
+Stock day_change: 286.000000
+
+Stock id: #100
+Stock name: InterContinental Hotels Group plc
+Stock current_price: 3.000000
+Stock day_change: 352.000000
+
+Stock id: #101
+Stock name: Berkeley Group Holdings plc
+Stock current_price: 3.000000
+Stock day_change: 385.000000
+
+Stock id: #102
+Stock name: Next plc
+Stock current_price: 3.000000
+Stock day_change: 472.000000
