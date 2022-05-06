@@ -1,5 +1,6 @@
 # Repository Specific
 .out
+.bin
 
 # Prerequisites
 *.d
