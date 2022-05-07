@@ -35,6 +35,18 @@ operator if x=’X’. Make your program print on the screen the usage of all th
 
 3. To be able to use the function in your program, you will need to include the header file “logical.h” into your main program. Afterwards, try to only compile your program by using the “-c” option of the gcc compiler. If no errors occur, then link the object code files “logical.o” and “logical use.o” using the “-o” option. Execute the produced program and verify that it works as intended.
 
+    The required set of command line instructions for this is the following:
+
+    ```
+    gcc logical.c -c
+    gcc logical_use.c -c
+    gcc -o logical_use logical_use.o logical.o
+    logical_use
+    ```
+    Good explanation on linking process:
+
+    <https://stackoverflow.com/questions/15441877/how-do-i-link-object-files-in-c-fails-with-undefined-symbols-for-architecture>
+
 4. If everything went well until this point, you have successfully created a minimal example of a C library, whose functionality is within the object file “logical.o”. Create a copy of file “logical.o” as “logical yourLASTNAME.o” and of file “logical.h” as “logical yourLASTNAME.h”.Send by e-mail the new object file (not the source) along with the new header file to the person/team in front of you (or to the first person/team of the desks’ column where you are belong) and notify them.
 When yourself receive the respective files from the corresponding person/team, modify your program to use their files instead of your own.
 You can go own with the next exercises until you wait.
