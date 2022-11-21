@@ -1,0 +1,508 @@
+_____________________________________________________________________
+
+Stocks Information
+
+_____________________________________________________________________
+
+We retrieve 100. results 
+
+stock ID: #1
+Stock Name: 3i Group Plc
+Stock Current Price: 1238.50
+Stock Day Change: 0.00
+
+stock ID: #2
+Stock Name: Abrdn plc
+Stock Current Price: 192.75
+Stock Day Change: 0.00
+
+stock ID: #3
+Stock Name: Admiral Group
+Stock Current Price: 2201.00
+Stock Day Change: 0.00
+
+stock ID: #4
+Stock Name: Airtel Africa plc
+Stock Current Price: 153.90
+Stock Day Change: 0.00
+
+stock ID: #5
+Stock Name: Anglo American
+Stock Current Price: 3850.00
+Stock Day Change: 0.00
+
+stock ID: #6
+Stock Name: Antofagasta plc
+Stock Current Price: 1495.00
+Stock Day Change: 0.00
+
+stock ID: #7
+Stock Name: Ashtead Group plc
+Stock Current Price: 4011.00
+Stock Day Change: 0.00
+
+stock ID: #8
+Stock Name: Associated British Foods plc
+Stock Current Price: 1705.00
+Stock Day Change: 0.00
+
+stock ID: #9
+Stock Name: AstraZeneca plc
+Stock Current Price: 10442.00
+Stock Day Change: 0.00
+
+stock ID: #10
+Stock Name: Auto Trader Group plc
+Stock Current Price: 586.80
+Stock Day Change: 0.00
+
+stock ID: #11
+Stock Name: Avast plc
+Stock Current Price: 479.30
+Stock Day Change: 0.00
+
+stock ID: #12
+Stock Name: AVEVA Group plc
+Stock Current Price: 2215.00
+Stock Day Change: 0.00
+
+stock ID: #13
+Stock Name: Aviva Plc
+Stock Current Price: 428.70
+Stock Day Change: 0.00
+
+stock ID: #14
+Stock Name: B&amp;M European Value Retail SA
+Stock Current Price: 383.70
+Stock Day Change: 0.00
+
+stock ID: #15
+Stock Name: BAE Systems plc
+Stock Current Price: 778.20
+Stock Day Change: 0.00
+
+stock ID: #16
+Stock Name: Barclays plc
+Stock Current Price: 167.80
+Stock Day Change: 0.00
+
+stock ID: #17
+Stock Name: Barratt Developments plc
+Stock Current Price: 500.00
+Stock Day Change: 0.00
+
+stock ID: #18
+Stock Name: Berkeley Group Holdings plc
+Stock Current Price: 4238.00
+Stock Day Change: 0.00
+
+stock ID: #19
+Stock Name: BP Plc
+Stock Current Price: 431.30
+Stock Day Change: 0.00
+
+stock ID: #20
+Stock Name: British American Tobacco plc
+Stock Current Price: 3536.50
+Stock Day Change: 0.00
+
+stock ID: #21
+Stock Name: British Land Co plc
+Stock Current Price: 521.20
+Stock Day Change: 0.00
+
+stock ID: #22
+Stock Name: BT Group plc
+Stock Current Price: 187.60
+Stock Day Change: 0.00
+
+stock ID: #23
+Stock Name: Bunzl plc
+Stock Current Price: 2811.00
+Stock Day Change: 0.00
+
+stock ID: #24
+Stock Name: Burberry Group plc
+Stock Current Price: 1701.50
+Stock Day Change: 0.00
+
+stock ID: #25
+Stock Name: Coca-Cola HBC AG
+Stock Current Price: 1703.00
+Stock Day Change: 0.00
+
+stock ID: #26
+Stock Name: Compass Group plc
+Stock Current Price: 1769.00
+Stock Day Change: 0.00
+
+stock ID: #27
+Stock Name: CRH plc
+Stock Current Price: 3235.00
+Stock Day Change: 0.00
+
+stock ID: #28
+Stock Name: Croda International plc
+Stock Current Price: 6758.00
+Stock Day Change: 0.00
+
+stock ID: #29
+Stock Name: DCC plc
+Stock Current Price: 5604.00
+Stock Day Change: 0.00
+
+stock ID: #30
+Stock Name: Dechra Pharmaceuticals plc
+Stock Current Price: 3568.00
+Stock Day Change: 0.00
+
+stock ID: #31
+Stock Name: Diageo plc
+Stock Current Price: 3622.00
+Stock Day Change: 0.00
+
+stock ID: #32
+Stock Name: Endeavour Mining plc
+Stock Current Price: 1804.00
+Stock Day Change: 0.00
+
+stock ID: #33
+Stock Name: Entain plc
+Stock Current Price: 1460.00
+Stock Day Change: 0.00
+
+stock ID: #34
+Stock Name: Experian Plc
+Stock Current Price: 2568.00
+Stock Day Change: 0.00
+
+stock ID: #35
+Stock Name: Flutter Entertainment
+Stock Current Price: 9282.00
+Stock Day Change: 0.00
+
+stock ID: #36
+Stock Name: Fresnillo
+Stock Current Price: 769.00
+Stock Day Change: 0.00
+
+stock ID: #37
+Stock Name: Glencore plc
+Stock Current Price: 523.70
+Stock Day Change: 0.00
+
+stock ID: #38
+Stock Name: GSK PLC
+Stock Current Price: 1707.80
+Stock Day Change: 0.00
+
+stock ID: #39
+Stock Name: Halma plc
+Stock Current Price: 2181.00
+Stock Day Change: 0.00
+
+stock ID: #40
+Stock Name: Harbour Energy plc
+Stock Current Price: 378.70
+Stock Day Change: 0.00
+
+stock ID: #41
+Stock Name: Hargreaves Lansdown plc
+Stock Current Price: 838.40
+Stock Day Change: 0.00
+
+stock ID: #42
+Stock Name: Hikma Pharmaceuticals
+Stock Current Price: 1673.00
+Stock Day Change: 0.00
+
+stock ID: #43
+Stock Name: Howden Joinery Group Plc
+Stock Current Price: 674.80
+Stock Day Change: 0.00
+
+stock ID: #44
+Stock Name: HSBC Holdings plc
+Stock Current Price: 529.60
+Stock Day Change: 0.00
+
+stock ID: #45
+Stock Name: Imperial Brands Group
+Stock Current Price: 1791.50
+Stock Day Change: 0.00
+
+stock ID: #46
+Stock Name: Informa plc
+Stock Current Price: 537.40
+Stock Day Change: 0.00
+
+stock ID: #47
+Stock Name: InterContinental Hotels Group plc
+Stock Current Price: 4841.00
+Stock Day Change: 0.00
+
+stock ID: #48
+Stock Name: Intermediate Capital Group plc
+Stock Current Price: 1540.50
+Stock Day Change: 0.00
+
+stock ID: #49
+Stock Name: International Consolidated Airlines Group SA
+Stock Current Price: 125.92
+Stock Day Change: 0.00
+
+stock ID: #50
+Stock Name: Intertek Group plc
+Stock Current Price: 4558.00
+Stock Day Change: 0.00
+
+stock ID: #51
+Stock Name: ITV plc
+Stock Current Price: 70.60
+Stock Day Change: 0.00
+
+stock ID: #52
+Stock Name: JD Sports Fashion plc
+Stock Current Price: 122.10
+Stock Day Change: 0.00
+
+stock ID: #53
+Stock Name: Kingfisher
+Stock Current Price: 259.90
+Stock Day Change: 0.00
+
+stock ID: #54
+Stock Name: Land Securities Group plc
+Stock Current Price: 766.40
+Stock Day Change: 0.00
+
+stock ID: #55
+Stock Name: Legal &amp; General Group plc
+Stock Current Price: 255.60
+Stock Day Change: 0.00
+
+stock ID: #56
+Stock Name: Lloyds Banking Group plc
+Stock Current Price: 45.13
+Stock Day Change: 0.00
+
+stock ID: #57
+Stock Name: London Stock Exchange Group plc
+Stock Current Price: 7144.00
+Stock Day Change: 0.00
+
+stock ID: #58
+Stock Name: M&amp;G plc
+Stock Current Price: 216.40
+Stock Day Change: 0.00
+
+stock ID: #59
+Stock Name: Meggitt
+Stock Current Price: 775.00
+Stock Day Change: 0.00
+
+stock ID: #60
+Stock Name: Melrose Industries plc
+Stock Current Price: 133.40
+Stock Day Change: 0.00
+
+stock ID: #61
+Stock Name: Mondi Plc
+Stock Current Price: 1532.00
+Stock Day Change: 0.00
+
+stock ID: #62
+Stock Name: National Grid
+Stock Current Price: 1121.00
+Stock Day Change: 0.00
+
+stock ID: #63
+Stock Name: NatWest Group plc
+Stock Current Price: 226.70
+Stock Day Change: 0.00
+
+stock ID: #64
+Stock Name: Next plc
+Stock Current Price: 6462.00
+Stock Day Change: 0.00
+
+stock ID: #65
+Stock Name: Ocado Group plc
+Stock Current Price: 908.60
+Stock Day Change: 0.00
+
+stock ID: #66
+Stock Name: Pearson plc
+Stock Current Price: 748.80
+Stock Day Change: 0.00
+
+stock ID: #67
+Stock Name: Pershing Square Holdings Ltd
+Stock Current Price: 2540.00
+Stock Day Change: 0.00
+
+stock ID: #68
+Stock Name: Persimmon plc
+Stock Current Price: 2185.00
+Stock Day Change: 0.00
+
+stock ID: #69
+Stock Name: Phoenix Group Holdings Plc
+Stock Current Price: 633.40
+Stock Day Change: 0.00
+
+stock ID: #70
+Stock Name: Prudential plc
+Stock Current Price: 1018.00
+Stock Day Change: 0.00
+
+stock ID: #71
+Stock Name: Reckitt Benckiser Group Plc
+Stock Current Price: 6180.00
+Stock Day Change: 0.00
+
+stock ID: #72
+Stock Name: RELX plc
+Stock Current Price: 2207.00
+Stock Day Change: 0.00
+
+stock ID: #73
+Stock Name: Rentokil Initial Plc
+Stock Current Price: 494.00
+Stock Day Change: 0.00
+
+stock ID: #74
+Stock Name: Rightmove plc
+Stock Current Price: 586.60
+Stock Day Change: 0.00
+
+stock ID: #75
+Stock Name: Rio Tinto plc
+Stock Current Price: 5758.00
+Stock Day Change: 0.00
+
+stock ID: #76
+Stock Name: Rolls Royce Holdings Plc
+Stock Current Price: 88.73
+Stock Day Change: 0.00
+
+stock ID: #77
+Stock Name: Royal Mail PLC
+Stock Current Price: 300.30
+Stock Day Change: 0.00
+
+stock ID: #78
+Stock Name: RS Group plc
+Stock Current Price: 960.00
+Stock Day Change: 0.00
+
+stock ID: #79
+Stock Name: Sage Group plc
+Stock Current Price: 653.60
+Stock Day Change: 0.00
+
+stock ID: #80
+Stock Name: Sainsbury (J) plc
+Stock Current Price: 227.20
+Stock Day Change: 0.00
+
+stock ID: #81
+Stock Name: Schroders plc
+Stock Current Price: 2894.00
+Stock Day Change: 0.00
+
+stock ID: #82
+Stock Name: Scottish Mortgage Investment Trust plc
+Stock Current Price: 795.60
+Stock Day Change: 0.00
+
+stock ID: #83
+Stock Name: Segro Plc
+Stock Current Price: 1084.00
+Stock Day Change: 0.00
+
+stock ID: #84
+Stock Name: Severn Trent Plc
+Stock Current Price: 2833.00
+Stock Day Change: 0.00
+
+stock ID: #85
+Stock Name: Shell plc
+Stock Current Price: 2361.00
+Stock Day Change: 0.00
+
+stock ID: #86
+Stock Name: Smith &amp; Nephew plc
+Stock Current Price: 1269.00
+Stock Day Change: 0.00
+
+stock ID: #87
+Stock Name: Smith (DS)
+Stock Current Price: 303.20
+Stock Day Change: 0.00
+
+stock ID: #88
+Stock Name: Smiths Group Plc
+Stock Current Price: 1561.00
+Stock Day Change: 0.00
+
+stock ID: #89
+Stock Name: Smurfit Kappa Group Plc
+Stock Current Price: 3179.00
+Stock Day Change: 0.00
+
+stock ID: #90
+Stock Name: Spirax-Sarco Engineering plc
+Stock Current Price: 10480.00
+Stock Day Change: 0.00
+
+stock ID: #91
+Stock Name: SSE plc
+Stock Current Price: 1760.50
+Stock Day Change: 0.00
+
+stock ID: #92
+Stock Name: St James's Place Plc
+Stock Current Price: 1247.50
+Stock Day Change: 0.00
+
+stock ID: #93
+Stock Name: Standard Chartered plc
+Stock Current Price: 632.80
+Stock Day Change: 0.00
+
+stock ID: #94
+Stock Name: Taylor Wimpey plc
+Stock Current Price: 129.75
+Stock Day Change: 0.00
+
+stock ID: #95
+Stock Name: Tesco plc
+Stock Current Price: 258.90
+Stock Day Change: 0.00
+
+stock ID: #96
+Stock Name: Unilever plc
+Stock Current Price: 3705.00
+Stock Day Change: 0.00
+
+stock ID: #97
+Stock Name: United Utilities Group Plc
+Stock Current Price: 1040.00
+Stock Day Change: 0.00
+
+stock ID: #98
+Stock Name: Vodafone Group plc
+Stock Current Price: 126.70
+Stock Day Change: 0.00
+
+stock ID: #99
+Stock Name: Whitbread plc
+Stock Current Price: 2629.00
+Stock Day Change: 0.00
+
+stock ID: #100
+Stock Name: WPP plc
+Stock Current Price: 922.80
+Stock Day Change: 0.00
+
