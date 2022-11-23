@@ -13,3 +13,13 @@ typedef struct school{
   int research_ranking;
   int international_ranking;
 } school;
+
+/*
+Function declaration
+*/
+
+char* getAttribute(char* file_line);
+
+void printSchool(school myschool);
+
+int getTotalSchools(FILE * ranking_file, int max_chars);
