@@ -6,7 +6,7 @@ required data structures and auxiliary functions.
 // Definition of structure to hold each school's information
 typedef struct school{
   int global_ranking;
-  char* name;
+  char name[40];
   float global_score;
   int insertion_ranking;
   int enterprise_ranking;
@@ -18,8 +18,12 @@ typedef struct school{
 Function declaration
 */
 
+int getTotalSchools(FILE * ranking_file, int max_chars);
+
 char* getAttribute(char* file_line);
 
-void printSchool(school myschool);
+void fillSchoolInfo(int attribute_index, char* raw_attribute, school* current_school);
 
-int getTotalSchools(FILE * ranking_file, int max_chars);
+void printSchool(school* myschool);
+
+void printAllSchools(school* schools, int num_schools);
