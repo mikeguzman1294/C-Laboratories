@@ -27,3 +27,47 @@ void fillSchoolInfo(int attribute_index, char* raw_attribute, school* current_sc
 void printSchool(school* myschool);
 
 void printAllSchools(school* schools, int num_schools);
+
+void printSchoolToFile(school* myschool, FILE* ranking_file);
+
+void printAllSchoolsToFile(school* schools, int num_schools);
+
+void sortSchools(school* schools, int num_schools, int attribute_index, char* order);
+
+// Comparing Functions Section
+
+int cmp_globalRanking_asc(const void * a, const void * b);
+
+int cmp_globalRanking_desc(const void * a, const void * b);
+
+
+int cmp_name_asc(const void * a, const void * b);
+
+int cmp_name_desc(const void * a, const void * b);
+
+
+int cmp_globalScore_asc(const void * a, const void * b);
+
+int cmp_globalScore_desc(const void * a, const void * b);
+
+
+int cmp_insertionRanking_asc(const void * a, const void * b);
+
+int cmp_insertionRanking_desc(const void * a, const void * b);
+
+
+int cmp_enterpriseRanking_asc(const void * a, const void * b);
+
+int cmp_enterpriseRanking_desc(const void * a, const void * b);
+
+
+int cmp_researchRanking_asc(const void * a, const void * b);
+
+int cmp_researchRanking_desc(const void * a, const void * b);
+
+
+int cmp_internationalRanking_asc(const void * a, const void * b);
+
+int cmp_internationalRanking_desc(const void * a, const void * b);
+
+
