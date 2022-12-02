@@ -1,14 +1,34 @@
+/**
+ * @file functions.c
+ * @author Miguel Guzman (miguel.guzman@imt-atlantique.net)
+ * @brief File containing auxiliary function definitions for 
+ * retrieving/sorting/printing schools
+ * @version 1.0
+ * @date 2022-11-28
+ * 
+ * @copyright Copyright (c) 2022
+ * 
+ */
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 
 #include "functions.h"
 
+/**
+ * @brief Gets the total number of schools given a raw HTML format text file
+ * 
+ * @param ranking_file File pointer for HTML raw data
+ * @param max_chars Max length for the array of chars where each line read is stored
+ * @return int Total number of schools in a HTML text file
+ */
 int getTotalSchools(FILE* ranking_file, int max_chars)
 {
   char temp[max_chars];
   int schoolsCounter = 0;
 
+	// Loop through the file to search for a school inforamtion section
   while(fgets(temp, max_chars, ranking_file) != NULL) 
   {
 		if((strstr(temp, "data-url=\"/article/")) != NULL) 
@@ -21,6 +41,12 @@ int getTotalSchools(FILE* ranking_file, int max_chars)
   return schoolsCounter;
 }
 
+/**
+ * @brief Extracts an attribute as a raw string given a string containing an attribute
+ * 
+ * @param file_line String containing a file line information
+ * @return char* Attribute in raw string format
+ */
 char* getAttribute(char* file_line)
 {
   // Save all possible char separators in an array (string)
@@ -30,7 +56,7 @@ char* getAttribute(char* file_line)
   // Initialize a read token number counter
   int current_token_number = 1;
 	
-  // Loop until the 4th token is read since it contains the attribut information
+  // Loop until the 4th token is read since it contains the attribute information
   while ( current_token_number != 4 ) 
   {
 		// Get the next token. NULL shall be used to tokenize current string without resetting pointer.
@@ -42,6 +68,13 @@ char* getAttribute(char* file_line)
   return strToken;
 }
 
+/**
+ * @brief Sets an atrribute value with its correct data type for a school individual
+ * 
+ * @param attribute_index Index that refers to a school attribute
+ * @param raw_attribute Attribute in raw string format
+ * @param current_school Pointer to school individual structure
+ */
 void fillSchoolInfo(int attribute_index, char* raw_attribute, school* current_school)
 {
   switch (attribute_index)
@@ -81,6 +114,11 @@ void fillSchoolInfo(int attribute_index, char* raw_attribute, school* current_sc
   }
 }
 
+/**
+ * @brief Prints a school individual to terminal
+ * 
+ * @param myschool Pointer to school individual structure
+ */
 void printSchool(school* myschool)
 {
 	printf("\n\t%d\t\t%s\t\t%.2f\t\t%d\t\t%d\t\t%d\t\t%d\n", 
@@ -93,6 +131,12 @@ void printSchool(school* myschool)
 					myschool->international_ranking);
 }
 
+/**
+ * @brief Prints all schools in a school array to terminal
+ * 
+ * @param schools Pointer to an array of schools structure
+ * @param num_schools Total number of schools in a HTML text file
+ */
 void printAllSchools(school* schools, int num_schools)
 {
 	printf("\nGlobal Ranking\tSchool Name\tGlobal Score\tInsertion Ranking\t"
@@ -103,6 +147,12 @@ void printAllSchools(school* schools, int num_schools)
 	}
 }
 
+/**
+ * @brief Prints a school individual to a given file
+ * 
+ * @param myschool Pointer to school individual structure
+ * @param ranking_file Pointer to a text file for writing
+ */
 void printSchoolToFile(school* myschool, FILE* ranking_file)
 {
 	fprintf(ranking_file, "\n\t%d\t\t%s\t\t%.2f\t\t%d\t\t%d\t\t%d\t\t%d\n", 
@@ -115,6 +165,12 @@ void printSchoolToFile(school* myschool, FILE* ranking_file)
 					 myschool->international_ranking);
 }
 
+/**
+ * @brief Prints all schools in a school array to a newly created file
+ * 
+ * @param schools Pointer to an array of schools structure
+ * @param num_schools Total number of schools in a HTML text file
+ */
 void printAllSchoolsToFile(school* schools, int num_schools)
 {
   FILE *write_file;
@@ -135,6 +191,14 @@ void printAllSchoolsToFile(school* schools, int num_schools)
   }
 }
 
+/**
+ * @brief Sorts a school array given a sorting attribute and a sorting order
+ * 
+ * @param schools Pointer to an array of schools structure
+ * @param num_schools Total number of schools in a HTML text file
+ * @param attribute_index Index that refers to a school attribute
+ * @param order String code that states a sorting order
+ */
 void sortSchools(school* schools, int num_schools, int attribute_index, char* order)
 {
   switch (attribute_index)
@@ -173,77 +237,169 @@ void sortSchools(school* schools, int num_schools, int attribute_index, char* or
   }
 }
 
+/**
+ * @brief Compares two school individuals given their global ranking in ascending order
+ * 
+ * @param a Pointer to element of school array
+ * @param b Pointer to element of school array
+ * @return int Comparison result for sorting function
+ */
 int cmp_globalRanking_asc(const void * a, const void * b)
 {
   return ( (((school*)a)->global_ranking < ((school*)b)->global_ranking) - (((school*)a)->global_ranking > ((school*)b)->global_ranking) );
 }
 
+/**
+ * @brief Compares two school individuals given their global ranking in descending order
+ * 
+ * @param a Pointer to element of school array
+ * @param b Pointer to element of school array
+ * @return int Comparison result for sorting function
+ */
 int cmp_globalRanking_desc(const void * a, const void * b)
 {
   return ( (((school*)a)->global_ranking > ((school*)b)->global_ranking) - (((school*)a)->global_ranking < ((school*)b)->global_ranking) );
 }
 
-
+/**
+ * @brief Compares two school individuals given their name in ascending order
+ * 
+ * @param a Pointer to element of school array
+ * @param b Pointer to element of school array
+ * @return int Comparison result for sorting function
+ */
 int cmp_name_asc(const void * a, const void * b)
 {
 	return strcmp( ((school*)b)->name, ((school*)a)->name );
 }
 
+/**
+ * @brief Compares two school individuals given their name in descending order
+ * 
+ * @param a Pointer to element of school array
+ * @param b Pointer to element of school array
+ * @return int Comparison result for sorting function
+ */
 int cmp_name_desc(const void * a, const void * b)
 {
   return strcmp( ((school*)a)->name, ((school*)b)->name );
 }
 
-
+/**
+ * @brief Compares two school individuals given their global score in ascending order
+ * 
+ * @param a Pointer to element of school array
+ * @param b Pointer to element of school array
+ * @return int Comparison result for sorting function
+ */
 int cmp_globalScore_asc(const void * a, const void * b)
 {
   return ( (((school*)a)->global_score < ((school*)b)->global_score) -(((school*)a)->global_score > ((school*)b)->global_score) );
 }
 
+/**
+ * @brief Compares two school individuals given their global score in descending order
+ * 
+ * @param a Pointer to element of school array
+ * @param b Pointer to element of school array
+ * @return int Comparison result for sorting function
+ */
 int cmp_globalScore_desc(const void * a, const void * b)
 {
   return ( (((school*)a)->global_score > ((school*)b)->global_score) - (((school*)a)->global_score < ((school*)b)->global_score) );
 }
 
-
+/**
+ * @brief Compares two school individuals given their insertion ranking in ascending order
+ * 
+ * @param a Pointer to element of school array
+ * @param b Pointer to element of school array
+ * @return int Comparison result for sorting function
+ */
 int cmp_insertionRanking_asc(const void * a, const void * b)
 {
   return ( (((school*)a)->insertion_ranking < ((school*)b)->insertion_ranking) - (((school*)a)->insertion_ranking > ((school*)b)->insertion_ranking) );
 }
 
+/**
+ * @brief Compares two school individuals given their insertion ranking in descending order
+ * 
+ * @param a Pointer to element of school array
+ * @param b Pointer to element of school array
+ * @return int Comparison result for sorting function
+ */
 int cmp_insertionRanking_desc(const void * a, const void * b)
 {
   return ( (((school*)a)->insertion_ranking > ((school*)b)->insertion_ranking) - (((school*)a)->insertion_ranking < ((school*)b)->insertion_ranking) );
 }
 
-
+/**
+ * @brief Compares two school individuals given their enterprise ranking in ascending order
+ * 
+ * @param a Pointer to element of school array
+ * @param b Pointer to element of school array
+ * @return int Comparison result for sorting function
+ */
 int cmp_enterpriseRanking_asc(const void * a, const void * b)
 {
   return ( (((school*)a)->enterprise_ranking < ((school*)b)->enterprise_ranking) - (((school*)a)->enterprise_ranking > ((school*)b)->enterprise_ranking) );
 }
 
+/**
+ * @brief Compares two school individuals given their enterprise ranking in descending order
+ * 
+ * @param a Pointer to element of school array
+ * @param b Pointer to element of school array
+ * @return int Comparison result for sorting function
+ */
 int cmp_enterpriseRanking_desc(const void * a, const void * b)
 {
   return ( (((school*)a)->enterprise_ranking > ((school*)b)->enterprise_ranking) - (((school*)a)->enterprise_ranking < ((school*)b)->enterprise_ranking) );
 }
 
-
+/**
+ * @brief Compares two school individuals given their research ranking in ascending order
+ * 
+ * @param a Pointer to element of school array
+ * @param b Pointer to element of school array
+ * @return int Comparison result for sorting function
+ */
 int cmp_researchRanking_asc(const void * a, const void * b)
 {
   return ( (((school*)a)->research_ranking < ((school*)b)->research_ranking) - (((school*)a)->research_ranking > ((school*)b)->research_ranking) );
 }
 
+/**
+ * @brief Compares two school individuals given their research ranking in descending order
+ * 
+ * @param a Pointer to element of school array
+ * @param b Pointer to element of school array
+ * @return int Comparison result for sorting function
+ */
 int cmp_researchRanking_desc(const void * a, const void * b)
 {
   return ( (((school*)a)->research_ranking > ((school*)b)->research_ranking) - (((school*)a)->research_ranking < ((school*)b)->research_ranking) );
 }
 
-
+/**
+ * @brief Compares two school individuals given their international ranking in ascending order
+ * 
+ * @param a Pointer to element of school array
+ * @param b Pointer to element of school array
+ * @return int Comparison result for sorting function
+ */
 int cmp_internationalRanking_asc(const void * a, const void * b)
 {
   return ( (((school*)a)->international_ranking < ((school*)b)->international_ranking) - (((school*)a)->international_ranking > ((school*)b)->international_ranking) );
 }
 
+/**
+ * @brief Compares two school individuals given their international ranking in descending order
+ * 
+ * @param a Pointer to element of school array
+ * @param b Pointer to element of school array
+ * @return int Comparison result for sorting function
+ */
 int cmp_internationalRanking_desc(const void * a, const void * b)
 {
   return ( (((school*)a)->international_ranking > ((school*)b)->international_ranking) - (((school*)a)->international_ranking < ((school*)b)->international_ranking) );

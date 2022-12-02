@@ -1,0 +1,504 @@
+\hypertarget{functions_8c}{}\doxysection{functions.\+c File Reference}
+\label{functions_8c}\index{functions.c@{functions.c}}
+
+
+File containing auxiliary function definitions for retrieving/sorting/printing schools.  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}functions.\+h\char`\"{}}\newline
+Include dependency graph for functions.\+c\+:
+% FIG 0
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{functions_8c_aad7475076ab051bbcc57c67ad5f992ad}{get\+Total\+Schools}} (FILE $\ast$ranking\+\_\+file, int max\+\_\+chars)
+\begin{DoxyCompactList}\small\item\em Gets the total number of schools given a raw HTML format text file. \end{DoxyCompactList}\item 
+char $\ast$ \mbox{\hyperlink{functions_8c_a997b5804487e2549d94cc1c399e63dd9}{get\+Attribute}} (char $\ast$file\+\_\+line)
+\begin{DoxyCompactList}\small\item\em Extracts an attribute as a raw string given a string containing an attribute. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{functions_8c_a8ed4b4991cd7617045d10ac001a10834}{fill\+School\+Info}} (int attribute\+\_\+index, char $\ast$raw\+\_\+attribute, \mbox{\hyperlink{structschool}{school}} $\ast$current\+\_\+school)
+\begin{DoxyCompactList}\small\item\em Sets an atrribute value with its correct data type for a school individual. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{functions_8c_a85f03fd92320488ed584c19b095e553f}{print\+School}} (\mbox{\hyperlink{structschool}{school}} $\ast$myschool)
+\begin{DoxyCompactList}\small\item\em Prints a school individual to terminal. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{functions_8c_ab0ff92e2e5e3cfb0277cd366cac264b9}{print\+All\+Schools}} (\mbox{\hyperlink{structschool}{school}} $\ast$schools, int num\+\_\+schools)
+\begin{DoxyCompactList}\small\item\em Prints all schools in a school array to terminal. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{functions_8c_a54221872129407a2c50f00b69742fcde}{print\+School\+To\+File}} (\mbox{\hyperlink{structschool}{school}} $\ast$myschool, FILE $\ast$ranking\+\_\+file)
+\begin{DoxyCompactList}\small\item\em Prints a school individual to a given file. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{functions_8c_a3c2b48565644fc86103bad3403683831}{print\+All\+Schools\+To\+File}} (\mbox{\hyperlink{structschool}{school}} $\ast$schools, int num\+\_\+schools)
+\begin{DoxyCompactList}\small\item\em Prints all schools in a school array to a newly created file. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{functions_8c_a85f2ca97a7de1d0bf95f3bef12bb82ad}{sort\+Schools}} (\mbox{\hyperlink{structschool}{school}} $\ast$schools, int num\+\_\+schools, int attribute\+\_\+index, char $\ast$order)
+\begin{DoxyCompactList}\small\item\em Sorts a school array given a sorting attribute and a sorting order. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{functions_8c_ad435fbf2f2dd26e9e165887073c28bd6}{cmp\+\_\+global\+Ranking\+\_\+asc}} (const void $\ast$a, const void $\ast$b)
+\begin{DoxyCompactList}\small\item\em Compares two school individuals given their global ranking in ascending order. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{functions_8c_ae160e92b8ae355953eb2e86700dfbca0}{cmp\+\_\+global\+Ranking\+\_\+desc}} (const void $\ast$a, const void $\ast$b)
+\begin{DoxyCompactList}\small\item\em Compares two school individuals given their global ranking in descending order. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{functions_8c_a1de691d128486bfe717279d0d1fdc164}{cmp\+\_\+name\+\_\+asc}} (const void $\ast$a, const void $\ast$b)
+\begin{DoxyCompactList}\small\item\em Compares two school individuals given their name in ascending order. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{functions_8c_a8d33100180973c78ff1edbdaa652d196}{cmp\+\_\+name\+\_\+desc}} (const void $\ast$a, const void $\ast$b)
+\begin{DoxyCompactList}\small\item\em Compares two school individuals given their name in descending order. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{functions_8c_a24339ac57a66e5e19794f12b3f4d4def}{cmp\+\_\+global\+Score\+\_\+asc}} (const void $\ast$a, const void $\ast$b)
+\begin{DoxyCompactList}\small\item\em Compares two school individuals given their global score in ascending order. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{functions_8c_ab3f0fea15e935871f0f3862ea6e18b50}{cmp\+\_\+global\+Score\+\_\+desc}} (const void $\ast$a, const void $\ast$b)
+\begin{DoxyCompactList}\small\item\em Compares two school individuals given their global score in descending order. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{functions_8c_a52f56a7a0271a15ebfbb050c5c196fff}{cmp\+\_\+insertion\+Ranking\+\_\+asc}} (const void $\ast$a, const void $\ast$b)
+\begin{DoxyCompactList}\small\item\em Compares two school individuals given their insertion ranking in ascending order. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{functions_8c_a6146dde8da5ad3f106dc4a2fcfe2968d}{cmp\+\_\+insertion\+Ranking\+\_\+desc}} (const void $\ast$a, const void $\ast$b)
+\begin{DoxyCompactList}\small\item\em Compares two school individuals given their insertion ranking in descending order. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{functions_8c_aaf7b55889d0dc83e372b299f4e1511bd}{cmp\+\_\+enterprise\+Ranking\+\_\+asc}} (const void $\ast$a, const void $\ast$b)
+\begin{DoxyCompactList}\small\item\em Compares two school individuals given their enterprise ranking in ascending order. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{functions_8c_a0d569d99fbd948c29b216009a7653b62}{cmp\+\_\+enterprise\+Ranking\+\_\+desc}} (const void $\ast$a, const void $\ast$b)
+\begin{DoxyCompactList}\small\item\em Compares two school individuals given their enterprise ranking in descending order. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{functions_8c_a45e3a9bedf9a7e127d20219d54dc30c4}{cmp\+\_\+research\+Ranking\+\_\+asc}} (const void $\ast$a, const void $\ast$b)
+\begin{DoxyCompactList}\small\item\em Compares two school individuals given their research ranking in ascending order. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{functions_8c_a8eb7e551b74465394ca4017da4896a52}{cmp\+\_\+research\+Ranking\+\_\+desc}} (const void $\ast$a, const void $\ast$b)
+\begin{DoxyCompactList}\small\item\em Compares two school individuals given their research ranking in descending order. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{functions_8c_a465a83cb0cf93b5881a6065b381f22b6}{cmp\+\_\+international\+Ranking\+\_\+asc}} (const void $\ast$a, const void $\ast$b)
+\begin{DoxyCompactList}\small\item\em Compares two school individuals given their international ranking in ascending order. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{functions_8c_a8a4c866f31c5af2065278039e12cf9d0}{cmp\+\_\+international\+Ranking\+\_\+desc}} (const void $\ast$a, const void $\ast$b)
+\begin{DoxyCompactList}\small\item\em Compares two school individuals given their international ranking in descending order. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+File containing auxiliary function definitions for retrieving/sorting/printing schools. 
+
+\begin{DoxyAuthor}{Author}
+Miguel Guzman (\href{mailto:miguel.guzman@imt-atlantique.net}{\texttt{ miguel.\+guzman@imt-\/atlantique.\+net}}) 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+2022-\/11-\/28
+\end{DoxyDate}
+\begin{DoxyCopyright}{Copyright}
+Copyright (c) 2022 
+\end{DoxyCopyright}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{functions_8c_aaf7b55889d0dc83e372b299f4e1511bd}\label{functions_8c_aaf7b55889d0dc83e372b299f4e1511bd}} 
+\index{functions.c@{functions.c}!cmp\_enterpriseRanking\_asc@{cmp\_enterpriseRanking\_asc}}
+\index{cmp\_enterpriseRanking\_asc@{cmp\_enterpriseRanking\_asc}!functions.c@{functions.c}}
+\doxysubsubsection{\texorpdfstring{cmp\_enterpriseRanking\_asc()}{cmp\_enterpriseRanking\_asc()}}
+{\footnotesize\ttfamily int cmp\+\_\+enterprise\+Ranking\+\_\+asc (\begin{DoxyParamCaption}\item[{const void $\ast$}]{a,  }\item[{const void $\ast$}]{b }\end{DoxyParamCaption})}
+
+
+
+Compares two school individuals given their enterprise ranking in ascending order. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em a} & Pointer to element of school array \\
+\hline
+{\em b} & Pointer to element of school array \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int Comparison result for sorting function 
+\end{DoxyReturn}
+\mbox{\Hypertarget{functions_8c_a0d569d99fbd948c29b216009a7653b62}\label{functions_8c_a0d569d99fbd948c29b216009a7653b62}} 
+\index{functions.c@{functions.c}!cmp\_enterpriseRanking\_desc@{cmp\_enterpriseRanking\_desc}}
+\index{cmp\_enterpriseRanking\_desc@{cmp\_enterpriseRanking\_desc}!functions.c@{functions.c}}
+\doxysubsubsection{\texorpdfstring{cmp\_enterpriseRanking\_desc()}{cmp\_enterpriseRanking\_desc()}}
+{\footnotesize\ttfamily int cmp\+\_\+enterprise\+Ranking\+\_\+desc (\begin{DoxyParamCaption}\item[{const void $\ast$}]{a,  }\item[{const void $\ast$}]{b }\end{DoxyParamCaption})}
+
+
+
+Compares two school individuals given their enterprise ranking in descending order. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em a} & Pointer to element of school array \\
+\hline
+{\em b} & Pointer to element of school array \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int Comparison result for sorting function 
+\end{DoxyReturn}
+\mbox{\Hypertarget{functions_8c_ad435fbf2f2dd26e9e165887073c28bd6}\label{functions_8c_ad435fbf2f2dd26e9e165887073c28bd6}} 
+\index{functions.c@{functions.c}!cmp\_globalRanking\_asc@{cmp\_globalRanking\_asc}}
+\index{cmp\_globalRanking\_asc@{cmp\_globalRanking\_asc}!functions.c@{functions.c}}
+\doxysubsubsection{\texorpdfstring{cmp\_globalRanking\_asc()}{cmp\_globalRanking\_asc()}}
+{\footnotesize\ttfamily int cmp\+\_\+global\+Ranking\+\_\+asc (\begin{DoxyParamCaption}\item[{const void $\ast$}]{a,  }\item[{const void $\ast$}]{b }\end{DoxyParamCaption})}
+
+
+
+Compares two school individuals given their global ranking in ascending order. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em a} & Pointer to element of school array \\
+\hline
+{\em b} & Pointer to element of school array \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int Comparison result for sorting function 
+\end{DoxyReturn}
+\mbox{\Hypertarget{functions_8c_ae160e92b8ae355953eb2e86700dfbca0}\label{functions_8c_ae160e92b8ae355953eb2e86700dfbca0}} 
+\index{functions.c@{functions.c}!cmp\_globalRanking\_desc@{cmp\_globalRanking\_desc}}
+\index{cmp\_globalRanking\_desc@{cmp\_globalRanking\_desc}!functions.c@{functions.c}}
+\doxysubsubsection{\texorpdfstring{cmp\_globalRanking\_desc()}{cmp\_globalRanking\_desc()}}
+{\footnotesize\ttfamily int cmp\+\_\+global\+Ranking\+\_\+desc (\begin{DoxyParamCaption}\item[{const void $\ast$}]{a,  }\item[{const void $\ast$}]{b }\end{DoxyParamCaption})}
+
+
+
+Compares two school individuals given their global ranking in descending order. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em a} & Pointer to element of school array \\
+\hline
+{\em b} & Pointer to element of school array \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int Comparison result for sorting function 
+\end{DoxyReturn}
+\mbox{\Hypertarget{functions_8c_a24339ac57a66e5e19794f12b3f4d4def}\label{functions_8c_a24339ac57a66e5e19794f12b3f4d4def}} 
+\index{functions.c@{functions.c}!cmp\_globalScore\_asc@{cmp\_globalScore\_asc}}
+\index{cmp\_globalScore\_asc@{cmp\_globalScore\_asc}!functions.c@{functions.c}}
+\doxysubsubsection{\texorpdfstring{cmp\_globalScore\_asc()}{cmp\_globalScore\_asc()}}
+{\footnotesize\ttfamily int cmp\+\_\+global\+Score\+\_\+asc (\begin{DoxyParamCaption}\item[{const void $\ast$}]{a,  }\item[{const void $\ast$}]{b }\end{DoxyParamCaption})}
+
+
+
+Compares two school individuals given their global score in ascending order. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em a} & Pointer to element of school array \\
+\hline
+{\em b} & Pointer to element of school array \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int Comparison result for sorting function 
+\end{DoxyReturn}
+\mbox{\Hypertarget{functions_8c_ab3f0fea15e935871f0f3862ea6e18b50}\label{functions_8c_ab3f0fea15e935871f0f3862ea6e18b50}} 
+\index{functions.c@{functions.c}!cmp\_globalScore\_desc@{cmp\_globalScore\_desc}}
+\index{cmp\_globalScore\_desc@{cmp\_globalScore\_desc}!functions.c@{functions.c}}
+\doxysubsubsection{\texorpdfstring{cmp\_globalScore\_desc()}{cmp\_globalScore\_desc()}}
+{\footnotesize\ttfamily int cmp\+\_\+global\+Score\+\_\+desc (\begin{DoxyParamCaption}\item[{const void $\ast$}]{a,  }\item[{const void $\ast$}]{b }\end{DoxyParamCaption})}
+
+
+
+Compares two school individuals given their global score in descending order. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em a} & Pointer to element of school array \\
+\hline
+{\em b} & Pointer to element of school array \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int Comparison result for sorting function 
+\end{DoxyReturn}
+\mbox{\Hypertarget{functions_8c_a52f56a7a0271a15ebfbb050c5c196fff}\label{functions_8c_a52f56a7a0271a15ebfbb050c5c196fff}} 
+\index{functions.c@{functions.c}!cmp\_insertionRanking\_asc@{cmp\_insertionRanking\_asc}}
+\index{cmp\_insertionRanking\_asc@{cmp\_insertionRanking\_asc}!functions.c@{functions.c}}
+\doxysubsubsection{\texorpdfstring{cmp\_insertionRanking\_asc()}{cmp\_insertionRanking\_asc()}}
+{\footnotesize\ttfamily int cmp\+\_\+insertion\+Ranking\+\_\+asc (\begin{DoxyParamCaption}\item[{const void $\ast$}]{a,  }\item[{const void $\ast$}]{b }\end{DoxyParamCaption})}
+
+
+
+Compares two school individuals given their insertion ranking in ascending order. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em a} & Pointer to element of school array \\
+\hline
+{\em b} & Pointer to element of school array \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int Comparison result for sorting function 
+\end{DoxyReturn}
+\mbox{\Hypertarget{functions_8c_a6146dde8da5ad3f106dc4a2fcfe2968d}\label{functions_8c_a6146dde8da5ad3f106dc4a2fcfe2968d}} 
+\index{functions.c@{functions.c}!cmp\_insertionRanking\_desc@{cmp\_insertionRanking\_desc}}
+\index{cmp\_insertionRanking\_desc@{cmp\_insertionRanking\_desc}!functions.c@{functions.c}}
+\doxysubsubsection{\texorpdfstring{cmp\_insertionRanking\_desc()}{cmp\_insertionRanking\_desc()}}
+{\footnotesize\ttfamily int cmp\+\_\+insertion\+Ranking\+\_\+desc (\begin{DoxyParamCaption}\item[{const void $\ast$}]{a,  }\item[{const void $\ast$}]{b }\end{DoxyParamCaption})}
+
+
+
+Compares two school individuals given their insertion ranking in descending order. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em a} & Pointer to element of school array \\
+\hline
+{\em b} & Pointer to element of school array \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int Comparison result for sorting function 
+\end{DoxyReturn}
+\mbox{\Hypertarget{functions_8c_a465a83cb0cf93b5881a6065b381f22b6}\label{functions_8c_a465a83cb0cf93b5881a6065b381f22b6}} 
+\index{functions.c@{functions.c}!cmp\_internationalRanking\_asc@{cmp\_internationalRanking\_asc}}
+\index{cmp\_internationalRanking\_asc@{cmp\_internationalRanking\_asc}!functions.c@{functions.c}}
+\doxysubsubsection{\texorpdfstring{cmp\_internationalRanking\_asc()}{cmp\_internationalRanking\_asc()}}
+{\footnotesize\ttfamily int cmp\+\_\+international\+Ranking\+\_\+asc (\begin{DoxyParamCaption}\item[{const void $\ast$}]{a,  }\item[{const void $\ast$}]{b }\end{DoxyParamCaption})}
+
+
+
+Compares two school individuals given their international ranking in ascending order. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em a} & Pointer to element of school array \\
+\hline
+{\em b} & Pointer to element of school array \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int Comparison result for sorting function 
+\end{DoxyReturn}
+\mbox{\Hypertarget{functions_8c_a8a4c866f31c5af2065278039e12cf9d0}\label{functions_8c_a8a4c866f31c5af2065278039e12cf9d0}} 
+\index{functions.c@{functions.c}!cmp\_internationalRanking\_desc@{cmp\_internationalRanking\_desc}}
+\index{cmp\_internationalRanking\_desc@{cmp\_internationalRanking\_desc}!functions.c@{functions.c}}
+\doxysubsubsection{\texorpdfstring{cmp\_internationalRanking\_desc()}{cmp\_internationalRanking\_desc()}}
+{\footnotesize\ttfamily int cmp\+\_\+international\+Ranking\+\_\+desc (\begin{DoxyParamCaption}\item[{const void $\ast$}]{a,  }\item[{const void $\ast$}]{b }\end{DoxyParamCaption})}
+
+
+
+Compares two school individuals given their international ranking in descending order. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em a} & Pointer to element of school array \\
+\hline
+{\em b} & Pointer to element of school array \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int Comparison result for sorting function 
+\end{DoxyReturn}
+\mbox{\Hypertarget{functions_8c_a1de691d128486bfe717279d0d1fdc164}\label{functions_8c_a1de691d128486bfe717279d0d1fdc164}} 
+\index{functions.c@{functions.c}!cmp\_name\_asc@{cmp\_name\_asc}}
+\index{cmp\_name\_asc@{cmp\_name\_asc}!functions.c@{functions.c}}
+\doxysubsubsection{\texorpdfstring{cmp\_name\_asc()}{cmp\_name\_asc()}}
+{\footnotesize\ttfamily int cmp\+\_\+name\+\_\+asc (\begin{DoxyParamCaption}\item[{const void $\ast$}]{a,  }\item[{const void $\ast$}]{b }\end{DoxyParamCaption})}
+
+
+
+Compares two school individuals given their name in ascending order. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em a} & Pointer to element of school array \\
+\hline
+{\em b} & Pointer to element of school array \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int Comparison result for sorting function 
+\end{DoxyReturn}
+\mbox{\Hypertarget{functions_8c_a8d33100180973c78ff1edbdaa652d196}\label{functions_8c_a8d33100180973c78ff1edbdaa652d196}} 
+\index{functions.c@{functions.c}!cmp\_name\_desc@{cmp\_name\_desc}}
+\index{cmp\_name\_desc@{cmp\_name\_desc}!functions.c@{functions.c}}
+\doxysubsubsection{\texorpdfstring{cmp\_name\_desc()}{cmp\_name\_desc()}}
+{\footnotesize\ttfamily int cmp\+\_\+name\+\_\+desc (\begin{DoxyParamCaption}\item[{const void $\ast$}]{a,  }\item[{const void $\ast$}]{b }\end{DoxyParamCaption})}
+
+
+
+Compares two school individuals given their name in descending order. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em a} & Pointer to element of school array \\
+\hline
+{\em b} & Pointer to element of school array \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int Comparison result for sorting function 
+\end{DoxyReturn}
+\mbox{\Hypertarget{functions_8c_a45e3a9bedf9a7e127d20219d54dc30c4}\label{functions_8c_a45e3a9bedf9a7e127d20219d54dc30c4}} 
+\index{functions.c@{functions.c}!cmp\_researchRanking\_asc@{cmp\_researchRanking\_asc}}
+\index{cmp\_researchRanking\_asc@{cmp\_researchRanking\_asc}!functions.c@{functions.c}}
+\doxysubsubsection{\texorpdfstring{cmp\_researchRanking\_asc()}{cmp\_researchRanking\_asc()}}
+{\footnotesize\ttfamily int cmp\+\_\+research\+Ranking\+\_\+asc (\begin{DoxyParamCaption}\item[{const void $\ast$}]{a,  }\item[{const void $\ast$}]{b }\end{DoxyParamCaption})}
+
+
+
+Compares two school individuals given their research ranking in ascending order. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em a} & Pointer to element of school array \\
+\hline
+{\em b} & Pointer to element of school array \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int Comparison result for sorting function 
+\end{DoxyReturn}
+\mbox{\Hypertarget{functions_8c_a8eb7e551b74465394ca4017da4896a52}\label{functions_8c_a8eb7e551b74465394ca4017da4896a52}} 
+\index{functions.c@{functions.c}!cmp\_researchRanking\_desc@{cmp\_researchRanking\_desc}}
+\index{cmp\_researchRanking\_desc@{cmp\_researchRanking\_desc}!functions.c@{functions.c}}
+\doxysubsubsection{\texorpdfstring{cmp\_researchRanking\_desc()}{cmp\_researchRanking\_desc()}}
+{\footnotesize\ttfamily int cmp\+\_\+research\+Ranking\+\_\+desc (\begin{DoxyParamCaption}\item[{const void $\ast$}]{a,  }\item[{const void $\ast$}]{b }\end{DoxyParamCaption})}
+
+
+
+Compares two school individuals given their research ranking in descending order. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em a} & Pointer to element of school array \\
+\hline
+{\em b} & Pointer to element of school array \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int Comparison result for sorting function 
+\end{DoxyReturn}
+\mbox{\Hypertarget{functions_8c_a8ed4b4991cd7617045d10ac001a10834}\label{functions_8c_a8ed4b4991cd7617045d10ac001a10834}} 
+\index{functions.c@{functions.c}!fillSchoolInfo@{fillSchoolInfo}}
+\index{fillSchoolInfo@{fillSchoolInfo}!functions.c@{functions.c}}
+\doxysubsubsection{\texorpdfstring{fillSchoolInfo()}{fillSchoolInfo()}}
+{\footnotesize\ttfamily void fill\+School\+Info (\begin{DoxyParamCaption}\item[{int}]{attribute\+\_\+index,  }\item[{char $\ast$}]{raw\+\_\+attribute,  }\item[{\mbox{\hyperlink{structschool}{school}} $\ast$}]{current\+\_\+school }\end{DoxyParamCaption})}
+
+
+
+Sets an atrribute value with its correct data type for a school individual. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em attribute\+\_\+index} & Index that refers to a school attribute \\
+\hline
+{\em raw\+\_\+attribute} & Attribute in raw string format \\
+\hline
+{\em current\+\_\+school} & Pointer to school individual structure \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{functions_8c_a997b5804487e2549d94cc1c399e63dd9}\label{functions_8c_a997b5804487e2549d94cc1c399e63dd9}} 
+\index{functions.c@{functions.c}!getAttribute@{getAttribute}}
+\index{getAttribute@{getAttribute}!functions.c@{functions.c}}
+\doxysubsubsection{\texorpdfstring{getAttribute()}{getAttribute()}}
+{\footnotesize\ttfamily char$\ast$ get\+Attribute (\begin{DoxyParamCaption}\item[{char $\ast$}]{file\+\_\+line }\end{DoxyParamCaption})}
+
+
+
+Extracts an attribute as a raw string given a string containing an attribute. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em file\+\_\+line} & String containing a file line information \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+char$\ast$ Attribute in raw string format 
+\end{DoxyReturn}
+\mbox{\Hypertarget{functions_8c_aad7475076ab051bbcc57c67ad5f992ad}\label{functions_8c_aad7475076ab051bbcc57c67ad5f992ad}} 
+\index{functions.c@{functions.c}!getTotalSchools@{getTotalSchools}}
+\index{getTotalSchools@{getTotalSchools}!functions.c@{functions.c}}
+\doxysubsubsection{\texorpdfstring{getTotalSchools()}{getTotalSchools()}}
+{\footnotesize\ttfamily int get\+Total\+Schools (\begin{DoxyParamCaption}\item[{FILE $\ast$}]{ranking\+\_\+file,  }\item[{int}]{max\+\_\+chars }\end{DoxyParamCaption})}
+
+
+
+Gets the total number of schools given a raw HTML format text file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ranking\+\_\+file} & File pointer for HTML raw data \\
+\hline
+{\em max\+\_\+chars} & Max length for the array of chars where each line read is stored \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int Total number of schools in a HTML text file 
+\end{DoxyReturn}
+\mbox{\Hypertarget{functions_8c_ab0ff92e2e5e3cfb0277cd366cac264b9}\label{functions_8c_ab0ff92e2e5e3cfb0277cd366cac264b9}} 
+\index{functions.c@{functions.c}!printAllSchools@{printAllSchools}}
+\index{printAllSchools@{printAllSchools}!functions.c@{functions.c}}
+\doxysubsubsection{\texorpdfstring{printAllSchools()}{printAllSchools()}}
+{\footnotesize\ttfamily void print\+All\+Schools (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structschool}{school}} $\ast$}]{schools,  }\item[{int}]{num\+\_\+schools }\end{DoxyParamCaption})}
+
+
+
+Prints all schools in a school array to terminal. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em schools} & Pointer to an array of schools structure \\
+\hline
+{\em num\+\_\+schools} & Total number of schools in a HTML text file \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{functions_8c_a3c2b48565644fc86103bad3403683831}\label{functions_8c_a3c2b48565644fc86103bad3403683831}} 
+\index{functions.c@{functions.c}!printAllSchoolsToFile@{printAllSchoolsToFile}}
+\index{printAllSchoolsToFile@{printAllSchoolsToFile}!functions.c@{functions.c}}
+\doxysubsubsection{\texorpdfstring{printAllSchoolsToFile()}{printAllSchoolsToFile()}}
+{\footnotesize\ttfamily void print\+All\+Schools\+To\+File (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structschool}{school}} $\ast$}]{schools,  }\item[{int}]{num\+\_\+schools }\end{DoxyParamCaption})}
+
+
+
+Prints all schools in a school array to a newly created file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em schools} & Pointer to an array of schools structure \\
+\hline
+{\em num\+\_\+schools} & Total number of schools in a HTML text file \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{functions_8c_a85f03fd92320488ed584c19b095e553f}\label{functions_8c_a85f03fd92320488ed584c19b095e553f}} 
+\index{functions.c@{functions.c}!printSchool@{printSchool}}
+\index{printSchool@{printSchool}!functions.c@{functions.c}}
+\doxysubsubsection{\texorpdfstring{printSchool()}{printSchool()}}
+{\footnotesize\ttfamily void print\+School (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structschool}{school}} $\ast$}]{myschool }\end{DoxyParamCaption})}
+
+
+
+Prints a school individual to terminal. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em myschool} & Pointer to school individual structure \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{functions_8c_a54221872129407a2c50f00b69742fcde}\label{functions_8c_a54221872129407a2c50f00b69742fcde}} 
+\index{functions.c@{functions.c}!printSchoolToFile@{printSchoolToFile}}
+\index{printSchoolToFile@{printSchoolToFile}!functions.c@{functions.c}}
+\doxysubsubsection{\texorpdfstring{printSchoolToFile()}{printSchoolToFile()}}
+{\footnotesize\ttfamily void print\+School\+To\+File (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structschool}{school}} $\ast$}]{myschool,  }\item[{FILE $\ast$}]{ranking\+\_\+file }\end{DoxyParamCaption})}
+
+
+
+Prints a school individual to a given file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em myschool} & Pointer to school individual structure \\
+\hline
+{\em ranking\+\_\+file} & Pointer to a text file for writing \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{functions_8c_a85f2ca97a7de1d0bf95f3bef12bb82ad}\label{functions_8c_a85f2ca97a7de1d0bf95f3bef12bb82ad}} 
+\index{functions.c@{functions.c}!sortSchools@{sortSchools}}
+\index{sortSchools@{sortSchools}!functions.c@{functions.c}}
+\doxysubsubsection{\texorpdfstring{sortSchools()}{sortSchools()}}
+{\footnotesize\ttfamily void sort\+Schools (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structschool}{school}} $\ast$}]{schools,  }\item[{int}]{num\+\_\+schools,  }\item[{int}]{attribute\+\_\+index,  }\item[{char $\ast$}]{order }\end{DoxyParamCaption})}
+
+
+
+Sorts a school array given a sorting attribute and a sorting order. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em schools} & Pointer to an array of schools structure \\
+\hline
+{\em num\+\_\+schools} & Total number of schools in a HTML text file \\
+\hline
+{\em attribute\+\_\+index} & Index that refers to a school attribute \\
+\hline
+{\em order} & String code that states a sorting order \\
+\hline
+\end{DoxyParams}

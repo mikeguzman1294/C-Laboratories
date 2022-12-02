@@ -1,6 +1,6 @@
 CC=gcc
 VERSION=release
-CFLAGS=-O3
+CFLAGS=-O2
 
 ifeq ($(VERSION), debug)
 	CFLAGS=-g
@@ -9,7 +9,7 @@ endif
 ######## MAKE ALL #########
 
 all: main.o functions.o
-	$(CC) -o schools_ranking.out main.o functions.o
+	$(CC) main.o functions.o -o schools_ranking.out
 
 ######## MAKE RULES #########	
 
@@ -25,4 +25,4 @@ run_main: all
 ######## CLEAN #########
 
 clean:
-	rm *.o *.exe *.txt *.out all
+	rm *.o *.txt *.out all

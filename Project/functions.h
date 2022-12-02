@@ -1,9 +1,19 @@
-/*
-Header File for defining school's ranking information retrieval
-required data structures and auxiliary functions.
-*/
+/**
+ * @file functions.h
+ * @author Miguel Guzman (miguel.guzman@imt-atlantique.net)
+ * @brief Header File for declaring school's ranking information
+ * retrieval required data structures and auxiliary functions.
+ * @version 1.0
+ * @date 2022-11-28
+ * 
+ * @copyright Copyright (c) 2022
+ * 
+ */
 
-// Definition of structure to hold each school's information
+/**
+ * @brief Structure that represents an individual school.
+ * 
+ */
 typedef struct school{
   int global_ranking;
   char name[40];
@@ -14,9 +24,7 @@ typedef struct school{
   int international_ranking;
 } school;
 
-/*
-Function declaration
-*/
+/* Function Declaration Section */
 
 int getTotalSchools(FILE * ranking_file, int max_chars);
 
@@ -34,7 +42,7 @@ void printAllSchoolsToFile(school* schools, int num_schools);
 
 void sortSchools(school* schools, int num_schools, int attribute_index, char* order);
 
-// Comparing Functions Section
+/* Comparing Functions Section */
 
 int cmp_globalRanking_asc(const void * a, const void * b);
 
@@ -69,5 +77,3 @@ int cmp_researchRanking_desc(const void * a, const void * b);
 int cmp_internationalRanking_asc(const void * a, const void * b);
 
 int cmp_internationalRanking_desc(const void * a, const void * b);
-
-

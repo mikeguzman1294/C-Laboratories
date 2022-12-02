@@ -1,0 +1,49 @@
+\hypertarget{main_8c}{}\doxysection{main.\+c File Reference}
+\label{main_8c}\index{main.c@{main.c}}
+
+
+Main File for extracting \& sorting Usine Nouvelle\textquotesingle{}s ranking This file contains the main function that extracts HTML code from Usine Nouvelle\textquotesingle{}s schools of engineering ranking website into a text file. The text file is read to retrieve the information regarding the schools ranking and this information is deposited inside a data structure that can be sorted given user-\/defined sorting parameters. The sorted list of schools is printed into a text file for the user.  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include $<$stdbool.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}functions.\+h\char`\"{}}\newline
+Include dependency graph for main.\+c\+:
+% FIG 0
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{main_8c_a842ed03f27719bc87666bfd1f75415b8}\label{main_8c_a842ed03f27719bc87666bfd1f75415b8}} 
+\#define {\bfseries MAX\+\_\+\+LINE}~2048
+\item 
+\mbox{\Hypertarget{main_8c_a245231ca435afcafbeadca39c438bbad}\label{main_8c_a245231ca435afcafbeadca39c438bbad}} 
+\#define {\bfseries NUM\+\_\+\+ATTRIBUTES}~7
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{main_8c_a3c04138a5bfe5d72780bb7e82a18e627}\label{main_8c_a3c04138a5bfe5d72780bb7e82a18e627}} 
+int {\bfseries main} (int argc, char $\ast$$\ast$argv)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Main File for extracting \& sorting Usine Nouvelle\textquotesingle{}s ranking This file contains the main function that extracts HTML code from Usine Nouvelle\textquotesingle{}s schools of engineering ranking website into a text file. The text file is read to retrieve the information regarding the schools ranking and this information is deposited inside a data structure that can be sorted given user-\/defined sorting parameters. The sorted list of schools is printed into a text file for the user. 
+
+\begin{DoxyAuthor}{Author}
+Miguel Guzman (\href{mailto:miguel.guzman@imt-atlantique.net}{\texttt{ miguel.\+guzman@imt-\/atlantique.\+net}}) 
+\end{DoxyAuthor}
+\begin{DoxySeeAlso}{See also}
+\href{https://www.usinenouvelle.com/comparatif-des-ecoles-d-ingenieurs-2022}{\texttt{ https\+://www.\+usinenouvelle.\+com/comparatif-\/des-\/ecoles-\/d-\/ingenieurs-\/2022}} 
+\end{DoxySeeAlso}
+\begin{DoxyVersion}{Version}
+0.\+1 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+2022-\/11-\/28
+\end{DoxyDate}
+\begin{DoxyCopyright}{Copyright}
+Copyright (c) 2022 $\ast$ 
+\end{DoxyCopyright}
