@@ -14,6 +14,8 @@ Include dependency graph for functions.\+c\+:
 \doxysubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
+int \mbox{\hyperlink{functions_8c_a48a0e24dc1074ea5d545e108b370bdc9}{validate\+Sorting\+Parameters}} (int attribute\+\_\+index, char $\ast$order, int num\+\_\+attributes)
+\begin{DoxyCompactList}\small\item\em Checks if a pair of school sorting parameters is valid. \end{DoxyCompactList}\item 
 int \mbox{\hyperlink{functions_8c_aad7475076ab051bbcc57c67ad5f992ad}{get\+Total\+Schools}} (FILE $\ast$ranking\+\_\+file, int max\+\_\+chars)
 \begin{DoxyCompactList}\small\item\em Gets the total number of schools given a raw HTML format text file. \end{DoxyCompactList}\item 
 char $\ast$ \mbox{\hyperlink{functions_8c_a997b5804487e2549d94cc1c399e63dd9}{get\+Attribute}} (char $\ast$file\+\_\+line)
@@ -502,3 +504,25 @@ Sorts a school array given a sorting attribute and a sorting order.
 {\em order} & String code that states a sorting order \\
 \hline
 \end{DoxyParams}
+\mbox{\Hypertarget{functions_8c_a48a0e24dc1074ea5d545e108b370bdc9}\label{functions_8c_a48a0e24dc1074ea5d545e108b370bdc9}} 
+\index{functions.c@{functions.c}!validateSortingParameters@{validateSortingParameters}}
+\index{validateSortingParameters@{validateSortingParameters}!functions.c@{functions.c}}
+\doxysubsubsection{\texorpdfstring{validateSortingParameters()}{validateSortingParameters()}}
+{\footnotesize\ttfamily int validate\+Sorting\+Parameters (\begin{DoxyParamCaption}\item[{int}]{attribute\+\_\+index,  }\item[{char $\ast$}]{order,  }\item[{int}]{num\+\_\+attributes }\end{DoxyParamCaption})}
+
+
+
+Checks if a pair of school sorting parameters is valid. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em attribute\+\_\+index} & Index that refers to a school attribute \\
+\hline
+{\em order} & String code that states a sorting order \\
+\hline
+{\em num\+\_\+attributes} & Number of attributes per school \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int Status value 
+\end{DoxyReturn}

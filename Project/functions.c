@@ -17,6 +17,22 @@
 #include "functions.h"
 
 /**
+ * @brief Checks if a pair of school sorting parameters is valid
+ * 
+ * @param attribute_index Index that refers to a school attribute
+ * @param order String code that states a sorting order
+ * @param num_attributes Number of attributes per school
+ * @return int Status value
+ */
+int validateSortingParameters(int attribute_index, char* order, int num_attributes)
+{
+	if( ((attribute_index < 1) || (attribute_index > num_attributes)) || (strcmp(order, "asc") != 0) && (strcmp(order, "desc") != 0) )
+		return -1;
+	else
+		return 0;
+}
+
+/**
  * @brief Gets the total number of schools given a raw HTML format text file
  * 
  * @param ranking_file File pointer for HTML raw data
@@ -205,31 +221,31 @@ void sortSchools(school* schools, int num_schools, int attribute_index, char* or
   {
 	case 1:
 	  /* Global Ranking Attribute */
-	  qsort(schools, num_schools, sizeof(school), (strcmp(order,"asc") ? cmp_globalRanking_asc : cmp_globalRanking_desc));
+	  qsort(schools, num_schools, sizeof(school), (strcmp(order,"asc") == 0 ? cmp_globalRanking_asc : cmp_globalRanking_desc));
 	  break;
 	case 2:
 	  /* School Name Attribute */	  
-	  qsort(schools, num_schools, sizeof(school), (strcmp(order,"asc") ? cmp_name_asc : cmp_name_desc));
+	  qsort(schools, num_schools, sizeof(school), (strcmp(order,"asc") == 0 ? cmp_name_asc : cmp_name_desc));
 	  break;
 	case 3:
 	  /* Global Score Attribute */
-	  qsort(schools, num_schools, sizeof(school), (strcmp(order,"asc") ? cmp_globalScore_asc : cmp_globalScore_desc));
+	  qsort(schools, num_schools, sizeof(school), (strcmp(order,"asc") == 0 ? cmp_globalScore_asc : cmp_globalScore_desc));
 	  break;
 	case 4:
 	  /* Insertion Ranking Attribute */		
-	  qsort(schools, num_schools, sizeof(school), (strcmp(order,"asc") ? cmp_insertionRanking_asc : cmp_insertionRanking_desc));
+	  qsort(schools, num_schools, sizeof(school), (strcmp(order,"asc") == 0 ? cmp_insertionRanking_asc : cmp_insertionRanking_desc));
 	  break;
 	case 5:
 	  /* Enterprise Ranking Attribute */
-	  qsort(schools, num_schools, sizeof(school), (strcmp(order,"asc") ? cmp_enterpriseRanking_asc : cmp_enterpriseRanking_desc));
+	  qsort(schools, num_schools, sizeof(school), (strcmp(order,"asc") == 0 ? cmp_enterpriseRanking_asc : cmp_enterpriseRanking_desc));
 	  break;
 	case 6:
 	  /* Research Ranking Attribute */
-	  qsort(schools, num_schools, sizeof(school), (strcmp(order,"asc") ? cmp_researchRanking_asc : cmp_researchRanking_desc));
+	  qsort(schools, num_schools, sizeof(school), (strcmp(order,"asc") == 0 ? cmp_researchRanking_asc : cmp_researchRanking_desc));
 	  break;
 	case 7:		
 	  /* Research Ranking Attribute */
-	  qsort(schools, num_schools, sizeof(school), (strcmp(order,"asc") ? cmp_internationalRanking_asc : cmp_internationalRanking_desc));
+	  qsort(schools, num_schools, sizeof(school), (strcmp(order,"asc") == 0 ? cmp_internationalRanking_asc : cmp_internationalRanking_desc));
 	  break;    
 	default:
 	  printf("\nReceived an invalid attribute index.\n");
@@ -246,7 +262,7 @@ void sortSchools(school* schools, int num_schools, int attribute_index, char* or
  */
 int cmp_globalRanking_asc(const void * a, const void * b)
 {
-  return ( (((school*)a)->global_ranking < ((school*)b)->global_ranking) - (((school*)a)->global_ranking > ((school*)b)->global_ranking) );
+	return ( (((school*)a)->global_ranking > ((school*)b)->global_ranking) - (((school*)a)->global_ranking < ((school*)b)->global_ranking) );
 }
 
 /**
@@ -258,7 +274,7 @@ int cmp_globalRanking_asc(const void * a, const void * b)
  */
 int cmp_globalRanking_desc(const void * a, const void * b)
 {
-  return ( (((school*)a)->global_ranking > ((school*)b)->global_ranking) - (((school*)a)->global_ranking < ((school*)b)->global_ranking) );
+  return ( (((school*)a)->global_ranking < ((school*)b)->global_ranking) - (((school*)a)->global_ranking > ((school*)b)->global_ranking) );
 }
 
 /**
@@ -270,7 +286,7 @@ int cmp_globalRanking_desc(const void * a, const void * b)
  */
 int cmp_name_asc(const void * a, const void * b)
 {
-	return strcmp( ((school*)b)->name, ((school*)a)->name );
+	return strcmp( ((school*)a)->name, ((school*)b)->name );
 }
 
 /**
@@ -282,7 +298,7 @@ int cmp_name_asc(const void * a, const void * b)
  */
 int cmp_name_desc(const void * a, const void * b)
 {
-  return strcmp( ((school*)a)->name, ((school*)b)->name );
+  return strcmp( ((school*)b)->name, ((school*)a)->name );
 }
 
 /**
@@ -294,7 +310,7 @@ int cmp_name_desc(const void * a, const void * b)
  */
 int cmp_globalScore_asc(const void * a, const void * b)
 {
-  return ( (((school*)a)->global_score < ((school*)b)->global_score) -(((school*)a)->global_score > ((school*)b)->global_score) );
+  return ( (((school*)a)->global_score > ((school*)b)->global_score) -(((school*)a)->global_score < ((school*)b)->global_score) );
 }
 
 /**
@@ -306,7 +322,7 @@ int cmp_globalScore_asc(const void * a, const void * b)
  */
 int cmp_globalScore_desc(const void * a, const void * b)
 {
-  return ( (((school*)a)->global_score > ((school*)b)->global_score) - (((school*)a)->global_score < ((school*)b)->global_score) );
+  return ( (((school*)a)->global_score < ((school*)b)->global_score) - (((school*)a)->global_score > ((school*)b)->global_score) );
 }
 
 /**
@@ -318,7 +334,7 @@ int cmp_globalScore_desc(const void * a, const void * b)
  */
 int cmp_insertionRanking_asc(const void * a, const void * b)
 {
-  return ( (((school*)a)->insertion_ranking < ((school*)b)->insertion_ranking) - (((school*)a)->insertion_ranking > ((school*)b)->insertion_ranking) );
+  return ( (((school*)a)->insertion_ranking > ((school*)b)->insertion_ranking) - (((school*)a)->insertion_ranking < ((school*)b)->insertion_ranking) );
 }
 
 /**
@@ -330,7 +346,7 @@ int cmp_insertionRanking_asc(const void * a, const void * b)
  */
 int cmp_insertionRanking_desc(const void * a, const void * b)
 {
-  return ( (((school*)a)->insertion_ranking > ((school*)b)->insertion_ranking) - (((school*)a)->insertion_ranking < ((school*)b)->insertion_ranking) );
+  return ( (((school*)a)->insertion_ranking < ((school*)b)->insertion_ranking) - (((school*)a)->insertion_ranking > ((school*)b)->insertion_ranking) );
 }
 
 /**
@@ -342,7 +358,7 @@ int cmp_insertionRanking_desc(const void * a, const void * b)
  */
 int cmp_enterpriseRanking_asc(const void * a, const void * b)
 {
-  return ( (((school*)a)->enterprise_ranking < ((school*)b)->enterprise_ranking) - (((school*)a)->enterprise_ranking > ((school*)b)->enterprise_ranking) );
+  return ( (((school*)a)->enterprise_ranking > ((school*)b)->enterprise_ranking) - (((school*)a)->enterprise_ranking < ((school*)b)->enterprise_ranking) );
 }
 
 /**
@@ -354,7 +370,7 @@ int cmp_enterpriseRanking_asc(const void * a, const void * b)
  */
 int cmp_enterpriseRanking_desc(const void * a, const void * b)
 {
-  return ( (((school*)a)->enterprise_ranking > ((school*)b)->enterprise_ranking) - (((school*)a)->enterprise_ranking < ((school*)b)->enterprise_ranking) );
+  return ( (((school*)a)->enterprise_ranking < ((school*)b)->enterprise_ranking) - (((school*)a)->enterprise_ranking > ((school*)b)->enterprise_ranking) );
 }
 
 /**
@@ -366,7 +382,7 @@ int cmp_enterpriseRanking_desc(const void * a, const void * b)
  */
 int cmp_researchRanking_asc(const void * a, const void * b)
 {
-  return ( (((school*)a)->research_ranking < ((school*)b)->research_ranking) - (((school*)a)->research_ranking > ((school*)b)->research_ranking) );
+  return ( (((school*)a)->research_ranking > ((school*)b)->research_ranking) - (((school*)a)->research_ranking < ((school*)b)->research_ranking) );
 }
 
 /**
@@ -378,7 +394,7 @@ int cmp_researchRanking_asc(const void * a, const void * b)
  */
 int cmp_researchRanking_desc(const void * a, const void * b)
 {
-  return ( (((school*)a)->research_ranking > ((school*)b)->research_ranking) - (((school*)a)->research_ranking < ((school*)b)->research_ranking) );
+  return ( (((school*)a)->research_ranking < ((school*)b)->research_ranking) - (((school*)a)->research_ranking > ((school*)b)->research_ranking) );
 }
 
 /**
@@ -390,7 +406,7 @@ int cmp_researchRanking_desc(const void * a, const void * b)
  */
 int cmp_internationalRanking_asc(const void * a, const void * b)
 {
-  return ( (((school*)a)->international_ranking < ((school*)b)->international_ranking) - (((school*)a)->international_ranking > ((school*)b)->international_ranking) );
+  return ( (((school*)a)->international_ranking > ((school*)b)->international_ranking) - (((school*)a)->international_ranking < ((school*)b)->international_ranking) );
 }
 
 /**
@@ -402,5 +418,5 @@ int cmp_internationalRanking_asc(const void * a, const void * b)
  */
 int cmp_internationalRanking_desc(const void * a, const void * b)
 {
-  return ( (((school*)a)->international_ranking > ((school*)b)->international_ranking) - (((school*)a)->international_ranking < ((school*)b)->international_ranking) );
+  return ( (((school*)a)->international_ranking < ((school*)b)->international_ranking) - (((school*)a)->international_ranking > ((school*)b)->international_ranking) );
 }

@@ -2,7 +2,7 @@
 \label{functions_8h}\index{functions.h@{functions.h}}
 
 
-Header File for defining school\textquotesingle{}s ranking information retrieval required data structures and auxiliary functions.  
+Header File for declaring school\textquotesingle{}s ranking information retrieval required data structures and auxiliary functions.  
 
 
 This graph shows which files directly or indirectly include this file\+:
@@ -21,6 +21,8 @@ typedef struct \mbox{\hyperlink{structschool}{school}} \mbox{\hyperlink{function
 \doxysubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
+int \mbox{\hyperlink{functions_8h_a48a0e24dc1074ea5d545e108b370bdc9}{validate\+Sorting\+Parameters}} (int attribute\+\_\+index, char $\ast$order, int num\+\_\+attributes)
+\begin{DoxyCompactList}\small\item\em Checks if a pair of school sorting parameters is valid. \end{DoxyCompactList}\item 
 int \mbox{\hyperlink{functions_8h_aad7475076ab051bbcc57c67ad5f992ad}{get\+Total\+Schools}} (FILE $\ast$ranking\+\_\+file, int max\+\_\+chars)
 \begin{DoxyCompactList}\small\item\em Gets the total number of schools given a raw HTML format text file. \end{DoxyCompactList}\item 
 char $\ast$ \mbox{\hyperlink{functions_8h_a997b5804487e2549d94cc1c399e63dd9}{get\+Attribute}} (char $\ast$file\+\_\+line)
@@ -68,7 +70,7 @@ int \mbox{\hyperlink{functions_8h_a8a4c866f31c5af2065278039e12cf9d0}{cmp\+\_\+in
 
 
 \doxysubsection{Detailed Description}
-Header File for defining school\textquotesingle{}s ranking information retrieval required data structures and auxiliary functions. 
+Header File for declaring school\textquotesingle{}s ranking information retrieval required data structures and auxiliary functions. 
 
 \begin{DoxyAuthor}{Author}
 Miguel Guzman (\href{mailto:miguel.guzman@imt-atlantique.net}{\texttt{ miguel.\+guzman@imt-\/atlantique.\+net}}) 
@@ -509,3 +511,25 @@ Sorts a school array given a sorting attribute and a sorting order.
 {\em order} & String code that states a sorting order \\
 \hline
 \end{DoxyParams}
+\mbox{\Hypertarget{functions_8h_a48a0e24dc1074ea5d545e108b370bdc9}\label{functions_8h_a48a0e24dc1074ea5d545e108b370bdc9}} 
+\index{functions.h@{functions.h}!validateSortingParameters@{validateSortingParameters}}
+\index{validateSortingParameters@{validateSortingParameters}!functions.h@{functions.h}}
+\doxysubsubsection{\texorpdfstring{validateSortingParameters()}{validateSortingParameters()}}
+{\footnotesize\ttfamily int validate\+Sorting\+Parameters (\begin{DoxyParamCaption}\item[{int}]{attribute\+\_\+index,  }\item[{char $\ast$}]{order,  }\item[{int}]{num\+\_\+attributes }\end{DoxyParamCaption})}
+
+
+
+Checks if a pair of school sorting parameters is valid. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em attribute\+\_\+index} & Index that refers to a school attribute \\
+\hline
+{\em order} & String code that states a sorting order \\
+\hline
+{\em num\+\_\+attributes} & Number of attributes per school \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int Status value 
+\end{DoxyReturn}

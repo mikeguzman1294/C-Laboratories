@@ -2,7 +2,7 @@
  * @file functions.h
  * @author Miguel Guzman (miguel.guzman@imt-atlantique.net)
  * @brief Header File for declaring school's ranking information
- * retrieval required data structures and auxiliary functions.
+ * retrieval required data structures and auxiliary functions
  * @version 1.0
  * @date 2022-11-28
  * 
@@ -25,6 +25,8 @@ typedef struct school{
 } school;
 
 /* Function Declaration Section */
+
+int validateSortingParameters(int attribute_index, char* order, int num_attributes);
 
 int getTotalSchools(FILE * ranking_file, int max_chars);
 

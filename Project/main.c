@@ -19,7 +19,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include <stdbool.h>
 
 #include "functions.h"
 
@@ -64,15 +63,22 @@ int main(int argc, char** argv)
     (void)!scanf(" %s", order);
   }
 
+	// Check if the entered sorting parameters are valid, if they are not then end the program execution
+	if(validateSortingParameters(attribute_index, order, NUM_ATTRIBUTES) == -1)
+	{
+		printf("Entered invalid sorting parameters.\nEnding program...\n");
+		return -1;
+	}
+
   // Call wget from system command line to import given website html information into a text file in local drive
   int systemRet = system("wget --quiet --output-document=usinenouvelle.txt https://www.usinenouvelle.com/comparatif-des-ecoles-d-ingenieurs-2022");
     
   // Error handling since system is not guaranteed to succeed
   if(systemRet == -1)
   {
-      // The system method failed
-      printf("System method failed.\nUnable to retrieve content from webpage.\nEnding program...\n");
-      return -1;
+    // The system method failed
+    printf("System method failed.\nUnable to retrieve content from webpage.\nEnding program...\n");
+    return -1;
   }   
 
   FILE *myfile; /*Declaration of file pointer*/    

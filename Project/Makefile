@@ -13,10 +13,10 @@ all: main.o functions.o
 
 ######## MAKE RULES #########	
 
-main.o: main.c
+main.o: main.c functions.h
 	$(CC) -c $(CFLAGS) main.c
 
-functions.o: functions.c
+functions.o: functions.c functions.h
 	$(CC) -c $(CFLAGS) functions.c
 
 run_main: all
@@ -25,4 +25,4 @@ run_main: all
 ######## CLEAN #########
 
 clean:
-	rm *.o *.txt *.out all
+	rm -f *.o *.txt *.out

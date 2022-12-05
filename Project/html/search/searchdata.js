@@ -1,9 +1,9 @@
 var indexSectionsWithContent =
 {
-  0: "cfgmps",
+  0: "cfgmpsv",
   1: "s",
   2: "fm",
-  3: "cfgmps",
+  3: "cfgmpsv",
   4: "s"
 };
 

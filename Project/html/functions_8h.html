@@ -72,7 +72,7 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
-<p>Header File for defining school's ranking information retrieval required data structures and auxiliary functions.  
+<p>Header File for declaring school's ranking information retrieval required data structures and auxiliary functions.  
 <a href="#details">More...</a></p>
 <div class="textblock"><div class="dynheader">
 This graph shows which files directly or indirectly include this file:</div>
@@ -97,6 +97,9 @@ typedef struct <a class="el" href="structschool.html">school</a>&#160;</td><td c
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
+<tr class="memitem:a48a0e24dc1074ea5d545e108b370bdc9"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="functions_8h.html#a48a0e24dc1074ea5d545e108b370bdc9">validateSortingParameters</a> (int attribute_index, char *order, int num_attributes)</td></tr>
+<tr class="memdesc:a48a0e24dc1074ea5d545e108b370bdc9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if a pair of school sorting parameters is valid.  <a href="functions_8h.html#a48a0e24dc1074ea5d545e108b370bdc9">More...</a><br /></td></tr>
+<tr class="separator:a48a0e24dc1074ea5d545e108b370bdc9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aad7475076ab051bbcc57c67ad5f992ad"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="functions_8h.html#aad7475076ab051bbcc57c67ad5f992ad">getTotalSchools</a> (FILE *ranking_file, int max_chars)</td></tr>
 <tr class="memdesc:aad7475076ab051bbcc57c67ad5f992ad"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the total number of schools given a raw HTML format text file.  <a href="functions_8h.html#aad7475076ab051bbcc57c67ad5f992ad">More...</a><br /></td></tr>
 <tr class="separator:aad7475076ab051bbcc57c67ad5f992ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -165,7 +168,7 @@ Functions</h2></td></tr>
 <tr class="separator:a8a4c866f31c5af2065278039e12cf9d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Header File for defining school's ranking information retrieval required data structures and auxiliary functions. </p>
+<div class="textblock"><p>Header File for declaring school's ranking information retrieval required data structures and auxiliary functions. </p>
 <dl class="section author"><dt>Author</dt><dd>Miguel Guzman (<a href="#" onclick="location.href='mai'+'lto:'+'mig'+'ue'+'l.g'+'uz'+'man'+'@i'+'mt-'+'at'+'lan'+'ti'+'que'+'.n'+'et'; return false;">migue<span style="display: none;">.nosp@m.</span>l.gu<span style="display: none;">.nosp@m.</span>zman@<span style="display: none;">.nosp@m.</span>imt-<span style="display: none;">.nosp@m.</span>atlan<span style="display: none;">.nosp@m.</span>tiqu<span style="display: none;">.nosp@m.</span>e.net</a>) </dd></dl>
 <dl class="section version"><dt>Version</dt><dd>1.0 </dd></dl>
 <dl class="section date"><dt>Date</dt><dd>2022-11-28</dd></dl>
@@ -997,6 +1000,51 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
+
+</div>
+</div>
+<a id="a48a0e24dc1074ea5d545e108b370bdc9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a48a0e24dc1074ea5d545e108b370bdc9">&#9670;&nbsp;</a></span>validateSortingParameters()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int validateSortingParameters </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>attribute_index</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>order</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>num_attributes</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Checks if a pair of school sorting parameters is valid. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">attribute_index</td><td>Index that refers to a school attribute </td></tr>
+    <tr><td class="paramname">order</td><td>String code that states a sorting order </td></tr>
+    <tr><td class="paramname">num_attributes</td><td>Number of attributes per school </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>int Status value </dd></dl>
 
 </div>
 </div>
